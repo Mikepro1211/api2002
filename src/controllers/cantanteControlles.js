@@ -11,7 +11,7 @@ exports.list = async(req, res) =>{
         next();
     }
 };
-exports.show = async(req, res, next) =>{
+exports.show = async(req, res) =>{
     try{
         const cantante = await Cantante.findOne({id: req.params.id});
         if(!cantante){
@@ -51,7 +51,7 @@ exports.update = async (req, res, next) =>{
     }
 
 };
-exports.delete = async (req, res,next) =>{
+exports.delete = async (req, res, next) =>{
     try{
         const cantante = await Cantante.findById({album: req.params.album});
         res.json({message: "Deleted singer"});
