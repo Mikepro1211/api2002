@@ -16,7 +16,7 @@ router.get('/api/list', CantanteInfo.list);
 router.get('/api/list/:id',CantanteInfo.show);
 router.post('/api/list',CantanteInfo.add);
 router.put('/api/list/:id', CantanteInfo.update);
-router.delete('/api/list/:id', CantanteInfo.delete);
+router.delete('/api/list/:album', CantanteInfo.delete);
 
 
 module.exports = router;
