@@ -53,7 +53,7 @@ exports.update = async (req, res, next) =>{
 };
 exports.delete = async (req, res, next) =>{
     try{
-        const cantante = await Cantante.findByIdAndRemove({album: req.params.album});
+        const cantante = await Cantante.findOneAndDelete({id: req.params.id});
         res.json({message: "Deleted singer"});
 
     }catch(error){
